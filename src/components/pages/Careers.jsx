@@ -129,11 +129,11 @@ const Careers = () => {
           <div className='flex flex-col lg:w-2/3'>
             <div className='flex flex-col'>
               <h2 className='text-[#16205F] font-bold text-lg lg:text-xl'>
-                Senior Web Full Stack Developer
+                Senior Product Designer
               </h2>
               <p className='text-[#16205F] text-sm lg:text-base mt-2'>
-                Seniority in development is not just about how much time you have spent behind the computer screen. 
-                It's  the way you think, how you approach problems, and their  responsibility you take on and feel.
+                "Seniority in design transcends mere time spent behind a computer screen. 
+                It encapsulates a designer's mindset, problem-solving approach, and profound sense of responsibility. It is a reflection of how one thinks, tackles challenge and contribute to meaningful solutions."
               </p>
               <div className='pt-5 flex flex-col lg:flex-row gap-10'>
                 <button className="bg-[#F4950E] text-white py-2 px-4 rounded flex items-center justify-center gap-1">
