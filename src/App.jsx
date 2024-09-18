@@ -14,10 +14,10 @@ return(
        <BrowserRouter >
                  <Navbar/>
        <Routes >
-          <Route path="/Tech" element={<TechNologies/>}></Route>
+          <Route path="/Technologies" element={<TechNologies/>}></Route>
           <Route path='/Start' element={<Start/>}></Route>     
           <Route path='/Careers' element={<Careers/>}></Route>          
-          <Route path='/Work' element={<Work/>}></Route>      
+          <Route path='/work' element={<Work/>}></Route>      
           <Route path='/about' element={<About/>}></Route>      
           <Route path='/contact' element={<Contact/>}></Route>      
        </Routes>

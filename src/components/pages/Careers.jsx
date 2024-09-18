@@ -18,8 +18,8 @@ const Careers = () => {
         <div className="absolute insert-0 lg:top-20 text-white text-center ">
           <h2 className="font-poppins text-4xl lg:text-6xl pb-5">Careers</h2>
           <span className="font-poppins text-sm lg:text-base">
-            Do you want to learn more about ABSA TECH? Our team is looking for people who 
-            want to work on interesting international projects, develop and learn new skills, 
+            Do you want to learn more about ABSA TECH? Our team is looking for people who  <br />
+            want to work on interesting international projects, develop and learn new skills,  <br />
             and share what they've learned with others.
           </span>
         </div>

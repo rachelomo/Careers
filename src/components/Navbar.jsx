@@ -11,15 +11,15 @@ const Logo = "/logo 3.png";
 // Dummy data for search functionality
 const dummyData = [
   "Technologies",
-  "How to Start",
+  "Start",
   "Careers",
-  "Our Work",
-  "About Us",
-  "Contact Us",
-  "Services",
-  "Digital Solutions",
-  "Web Development",
-  "Mobile App Development"
+  "Work",
+  "About",
+  "Contact",
+  // "Services",
+  // "Digital Solutions",
+  // "Web Development",
+  // "Mobile App Development"
 ];
 
 function Navbar() {
@@ -139,7 +139,7 @@ function Navbar() {
                 <div className="absolute mt-2 bg-white p-2 rounded shadow-lg flex flex-col z-20">
                   <p
                     className="text-blue-500 hover:text-blue-700 cursor-pointer"
-                    onClick={() => navigate('/Tech')}
+                    onClick={() => navigate('/Technologies')}
                   >
                     Technologies
                   </p>
@@ -244,7 +244,7 @@ function Navbar() {
                   <p
                     className="text-blue-500 hover:text-blue-700 cursor-pointer"
                     onClick={() => {
-                      navigate('/Tech');
+                      navigate('/Technologies');
                       closeMobileMenu();
                     }}
                   >
