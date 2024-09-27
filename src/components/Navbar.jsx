@@ -16,10 +16,6 @@ const dummyData = [
   "Work",
   "About",
   "Contact",
-  // "Services",
-  // "Digital Solutions",
-  // "Web Development",
-  // "Mobile App Development"
 ];
 
 function Navbar() {
@@ -90,28 +86,14 @@ function Navbar() {
 
   return (
     <nav className='bg-white text-[#215098]'>
-      <div className='flex items-center justify-between lg:pl-20 px-4 '>
+      <div className='flex items-center justify-between px-4 py-2 lg:pl-20 lg:px-4'>
         {/* Logo */}
         <img
           src={Logo}
           alt="logo"
-          className='w-[200px] h-[80px] lg:w-[270px] lg:h-[80.54px] cursor-pointer'
+          className='w-[150px] h-[60px] lg:w-[270px] lg:h-[80px] cursor-pointer'
           onClick={() => navigate('/')}
         />
-
-        {/* Mobile search bar */}
-        <div className={`flex items-center w-full md:hidden justify-center ${showMobileMenu ? 'hidden' : ''}`}>
-          <input
-            type="text"
-            placeholder="Search"
-            value={searchQuery}
-            onChange={(e) => handleSearch(e.target.value)}
-            className="md:w-auto transition-all duration-500 ease-in-out"
-          />
-          <button className=" text-black p-2 text-2xl rounded-r transition-all duration-500 ease-in-out">
-            <CiSearch />
-          </button>
-        </div>
 
         {/* Mobile menu toggle button */}
         <button
@@ -125,103 +107,101 @@ function Navbar() {
         </button>
 
         {/* Desktop search and menu */}
-        <div className="hidden md:flex justify-center w-full">
-          <div className="flex items-center gap-6 relative">
-            {/* Home dropdown */}
-            <div className="relative" ref={homeDropdownRef}>
-              <button
-                className="flex items-center cursor-pointer"
-                onClick={toggleHomeDropdown}
-              >
-                Home <IoIosArrowDown />
-              </button>
-              {showHomeDropdown && (
-                <div className="absolute mt-2 bg-white p-2 rounded shadow-lg flex flex-col z-20">
-                  <p
-                    className="text-blue-500 hover:text-blue-700 cursor-pointer"
-                    onClick={() => navigate('/Technologies')}
-                  >
-                    Technologies
-                  </p>
-                  <p
-                    className="text-blue-500 hover:text-blue-700 cursor-pointer"
-                    onClick={() => navigate('/Start')}
-                  >
-                    How to start
-                  </p>
-                </div>
-              )}
-            </div>
-
-            {/* Services dropdown */}
-            <div className="relative z-20" ref={servicesDropdownRef}>
-              <button
-                className="flex items-center cursor-pointer"
-                onClick={toggleServicesDropdown}
-              >
-                Services <IoIosArrowDown />
-              </button>
-              {showServicesDropdown && (
-                <div className="absolute mt-2 bg-white p-2 rounded shadow-lg flex flex-col">
-                  <p
-                    className="text-blue-500 hover:text-blue-700 cursor-pointer"
-                    onClick={() => navigate('/Careers')}
-                  >
-                    Careers
-                  </p>
-                  <p
-                    className="text-blue-500 hover:text-blue-700 cursor-pointer"
-                    onClick={() => navigate('/')}
-                  >
-                    Home
-                  </p>
-                </div>
-              )}
-            </div>
-
-            <li className="list-none cursor-pointer" onClick={() => navigate('/work')}>Our Work</li>
-            <li className="list-none cursor-pointer" onClick={() => navigate('/about')}>About</li>
-            <li className="list-none cursor-pointer" onClick={() => navigate('/contact')}>Contact</li>
-          </div>
-
-          <div className="relative lg:left-[8.7vw] md:left-[4vw] left-0 px-4 md:px-0">
-            <div className="flex w-full p-1 md:w-auto transition-all duration-500 ease-in-out">
-              <input
-                type="text"
-                placeholder="Search"
-                value={searchQuery}
-                onChange={(e) => handleSearch(e.target.value)}
-                className="md:w-auto transition-all duration-500 ease-in-out"
-              />
-              <button className=" text-black p-2 text-2xl rounded-r transition-all duration-500 ease-in-out">
-                <CiSearch />
-              </button>
-            </div>
-            {/* Search results dropdown */}
-            {searchResults.length > 0 && (
-              <div className="absolute mt-2 bg-white p-2 rounded shadow-lg w-full">
-                {searchResults.map((result, index) => (
-                  <p
-                    key={index}
-                    className="text-blue-500 hover:text-blue-700 cursor-pointer"
-                    onClick={() => {
-                      navigate(`/${result.toLowerCase().replace(/\s+/g, '')}`);
-                      setSearchQuery('');
-                      setSearchResults([]);
-                    }}
-                  >
-                    {result}
-                  </p>
-                ))}
+        <div className="hidden md:flex justify-center w-full items-center space-x-6">
+          {/* Home dropdown */}
+          <div className="relative" ref={homeDropdownRef}>
+            <button
+              className="flex items-center cursor-pointer"
+              onClick={toggleHomeDropdown}
+            >
+              Home <IoIosArrowDown />
+            </button>
+            {showHomeDropdown && (
+              <div className="absolute mt-2 bg-white p-2 rounded shadow-lg flex flex-col z-20">
+                <p
+                  className="text-blue-500 hover:text-blue-700 cursor-pointer"
+                  onClick={() => navigate('/Technologies')}
+                >
+                  Technologies
+                </p>
+                <p
+                  className="text-blue-500 hover:text-blue-700 cursor-pointer"
+                  onClick={() => navigate('/Start')}
+                >
+                  How to start
+                </p>
               </div>
             )}
           </div>
+
+          {/* Services dropdown */}
+          <div className="relative" ref={servicesDropdownRef}>
+            <button
+              className="flex items-center cursor-pointer"
+              onClick={toggleServicesDropdown}
+            >
+              Services <IoIosArrowDown />
+            </button>
+            {showServicesDropdown && (
+              <div className="absolute mt-2 bg-white p-2 rounded shadow-lg flex flex-col">
+                <p
+                  className="text-blue-500 hover:text-blue-700 cursor-pointer"
+                  onClick={() => navigate('/Careers')}
+                >
+                  Careers
+                </p>
+                <p
+                  className="text-blue-500 hover:text-blue-700 cursor-pointer"
+                  onClick={() => navigate('/')}
+                >
+                  Home
+                </p>
+              </div>
+            )}
+          </div>
+
+          <li className="list-none cursor-pointer" onClick={() => navigate('/work')}>Our Work</li>
+          <li className="list-none cursor-pointer" onClick={() => navigate('/about')}>About</li>
+          <li className="list-none cursor-pointer" onClick={() => navigate('/contact')}>Contact</li>
+        </div>
+
+        <div className="hidden md:flex relative w-[250px] lg:w-[300px] ">
+          <div className="flex  w-[250px] transition-all duration-500 ease-in-out lg:pr-[57px]">
+            <input
+              type="text"
+              placeholder="Search"
+              value={searchQuery}
+              onChange={(e) => handleSearch(e.target.value)}
+              className="w-full border border-gray-300 p-2 rounded-l-md w-[250px]"
+            />
+            <button className="text-black p-2 text-2xl bg-gray-100 rounded-r-md">
+              <CiSearch />
+            </button>
+          </div>
+          {/* Search results dropdown */}
+          {searchResults.length > 0 && (
+            <div className="absolute mt-2 bg-white p-2 rounded shadow-lg w-full">
+              {searchResults.map((result, index) => (
+                <p
+                  key={index}
+                  className="text-blue-500 hover:text-blue-700 cursor-pointer"
+                  onClick={() => {
+                    navigate(`/${result.toLowerCase().replace(/\s+/g, '')}`);
+                    setSearchQuery('');
+                    setSearchResults([]);
+                  }}
+                >
+                  {result}
+                </p>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
       {/* Mobile menu items */}
       {showMobileMenu && (
-        <div className="fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-4 md:hidden z-50">
+        <div className="fixed top-0 left-0 w-full h-full bg-white shadow-lg p-4 z-50 overflow-y-auto">
           <button
             className="absolute top-4 right-4 text-2xl"
             onClick={(e) => {
@@ -320,6 +300,39 @@ function Navbar() {
               Contact
             </li>
           </ul>
+
+          {/* Mobile search bar */}
+          <div className="mt-4">
+            <div className="flex w-full p-1 transition-all duration-500 ease-in-out">
+              <input
+                type="text"
+                placeholder="Search"
+                value={searchQuery}
+                onChange={(e) => handleSearch(e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded-l-md"
+              />
+              <button className="text-black p-2 text-2xl bg-gray-100 rounded-r-md">
+                <CiSearch />
+              </button>
+            </div>
+            {searchResults.length > 0 && (
+              <div className="mt-2 bg-white p-2 rounded shadow-lg">
+                {searchResults.map((result, index) => (
+                  <p
+                    key={index}
+                    className="text-blue-500 hover:text-blue-700 cursor-pointer"
+                    onClick={() => {
+                      navigate(`/${result.toLowerCase().replace(/\s+/g, '')}`);
+                      setSearchQuery('');
+                      setSearchResults([]);
+                    }}
+                  >
+                    {result}
+                  </p>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       )}
 

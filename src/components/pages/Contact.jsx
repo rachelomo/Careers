@@ -40,11 +40,11 @@ const Contact = () => {
 
   return (
     <div className='overflow-x-hidden'>     
-         <div className="relative bg-black w-full h-[45vh] flex flex-col items-center justify-center">
+         <div className="relative bg-black w-full h-[46vh] flex flex-col items-center justify-center">
     <img
      src={Rectang}
      alt="Rec"
-     className="w-full h-auto opacity-60" 
+     className="w-full h-[46vh] h-auto opacity-60" 
    />
    <div className="absolute insert-0 lg:top-20 text-white text-center ">
      <h2 className="font-poppins text-6xl pb-5">Contact</h2>

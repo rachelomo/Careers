@@ -50,18 +50,18 @@ const images = [
    ];
 // Reusable ImageCard component
 const ImageCard = ({ src, alt, width, height }) => (
-     <div className="bg-white p-2 mx-auto my-4 rounded border shadow-lg flex justify-center items-center max-w-full lg:relative left-4">
+     <div className="bg-white p-3 mx-auto my-4 rounded border shadow-lg flex justify-center items-center max-w-full lg:relative left-4">
        <img src={src} alt={alt}   className="w-auto h-auto object-contain max-w-full max-h-full" style={{ width, height }} />
      </div>
    ); 
    const TechNologies = () => {
      return (
        <div className="overflow-hidden">
-         <div className="relative bg-black w-full h-[45vh] flex flex-col items-center justify-center">
+         <div className="relative bg-black w-full h-[46vh] flex flex-col items-center justify-center">
            <img
              src="Rectangle 26 (1).png"
              alt="Rec"
-             className="w-full h-auto opacity-60"
+             className="w-full h-auto opacity-60 h-[46vh]  fit-contain"
            />
            <div className="absolute lg:top-20 text-white text-center">
              <h2 className="font-poppins text-6xl pb-5">Technologies</h2>

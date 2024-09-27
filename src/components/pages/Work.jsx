@@ -19,11 +19,11 @@ const Work = () => {
   return (
      <div>
      {/* Header Section */}
-     <div className="relative bg-black w-full h-[45vh] flex flex-col items-center justify-center">
+     <div className="relative bg-black w-full h-[46vh] flex flex-col items-center justify-center">
        <img
          src={Rectang}
          alt="Rec"
-         className="w-full h-auto object-cover opacity-60"
+         className="w-full h-auto h-[46vh] object-cover opacity-60"
        />
        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-4">
          <h2 className="font-poppins text-3xl md:text-4xl lg:text-6xl pb-5">Our Work</h2>

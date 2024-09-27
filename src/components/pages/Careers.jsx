@@ -9,11 +9,11 @@ const Careers = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-black w-full h-[45vh] flex flex-col items-center justify-center">
+      <div className="relative bg-black w-full h-[46vh] flex flex-col items-center justify-center">
         <img
           src={Rectang}
           alt="Rec"
-          className="w-full h-auto opacity-60"
+          className="w-full h-auto h-[46vh] opacity-60"
         />
         <div className="absolute insert-0 lg:top-20 text-white text-center ">
           <h2 className="font-poppins text-4xl lg:text-6xl pb-5">Careers</h2>
@@ -152,7 +152,7 @@ const Careers = () => {
           <h3 className='text-[#16205F] font-bold text-xl lg:text-2xl lg:w-1/3'>SKILLS</h3>
           <div className='flex flex-col lg:w-2/3'>
             <div className='flex flex-wrap gap-2'>
-              <button className="bg-yellow-300 text-white py-1 px-2 rounded">Node.js</button>
+              <button className="bg-yellow-300 text-white py-1 px-2 rounded">figma</button>
               <button className="bg-yellow-300 text-white py-1 px-2 rounded">React.js</button>
               <button className="bg-yellow-300 text-white py-1 px-2 rounded">Vue.js</button>
               <button className="bg-yellow-300 text-white py-1 px-2 rounded">Typescript</button>
